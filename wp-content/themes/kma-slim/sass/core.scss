@@ -70,6 +70,17 @@
   margin-top: 0 !important;
 }
 
+.pad-anchor {
+  clear: both;
+  &::after {
+    content:"";
+    display: block;
+    position: absolute;
+    padding-top: -200px;
+    height: 200px;
+  }
+}
+
 /****
 Social Media
  ***/

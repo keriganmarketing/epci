@@ -38,7 +38,7 @@ class Team
                 'show_in_nav_menus'  => true,
                 '_builtin'           => false,
                 'rewrite'            => [
-                    'slug'       => 'team',
+                    'slug'       => 'about',
                     'with_front' => true,
                     'feeds'      => true,
                     'pages'      => false
@@ -97,6 +97,30 @@ class Team
         }, 0, 2);
     }
 
+    public function getImageSizes( $url ) {
+
+        // Split the $url into two parts with the wp-content directory as the separator
+        $parsed_url  = explode( parse_url( WP_CONTENT_URL, PHP_URL_PATH ), $url );
+
+        // Get the host of the current site and the host of the $url, ignoring www
+        $this_host = str_ireplace( 'www.', '', parse_url( home_url(), PHP_URL_HOST ) );
+        $file_host = str_ireplace( 'www.', '', parse_url( $url, PHP_URL_HOST ) );
+
+        // Return nothing if there aren't any $url parts or if the current host and $url host do not match
+        if ( ! isset( $parsed_url[1] ) || empty( $parsed_url[1] ) || ( $this_host != $file_host ) ) {
+            return;
+        }
+
+        // Now we're going to quickly search the DB for any attachment GUID with a partial path match
+
+        // Example: /uploads/2013/05/test-image.jpg
+        global $wpdb;
+        $attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->prefix}posts WHERE guid RLIKE %s;", $parsed_url[1] ) );
+
+        // Returns null if no attachment is found
+        return $attachment[0];
+    }
+
     public function getTeam($args = [])
     {
         $request = [
@@ -119,7 +143,12 @@ class Team
                 'email'      => (isset($item->contact_info_email) ? $item->contact_info_email : null),
                 'phone'      => (isset($item->contact_info_phone) ? $item->contact_info_phone : null),
                 'slug'       => (isset($item->post_name) ? $item->post_name : null),
-                'thumbnail'  => (isset($item->contact_info_photo) ? $item->contact_info_photo : null),
+                'images'     => [
+                    'thumbnail' => wp_get_attachment_image_src($this->getImageSizes($item->contact_info_photo), 'thumbnail'),
+                    'medium'    => wp_get_attachment_image_src($this->getImageSizes($item->contact_info_photo), 'medium'),
+                    'large'     => wp_get_attachment_image_src($this->getImageSizes($item->contact_info_photo), 'large'),
+                    'full'      => wp_get_attachment_image_src($this->getImageSizes($item->contact_info_photo), 'full')
+                ],
                 'link'       => get_permalink($item->ID),
             ]);
         }
