@@ -466,6 +466,9 @@ body {
       background-image: url('/wp-content/themes/kma-slim/img/team@2x.png');
       background-size: cover;
       background-position: center;
+      @media screen and (max-width: $tablet) {
+        min-height: 415px;
+      }
     }
   }
 
