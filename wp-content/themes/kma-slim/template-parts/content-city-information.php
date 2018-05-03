@@ -27,7 +27,7 @@ include(locate_template('template-parts/sections/top.php'));
         </section>
         <div class="section-wrapper area-tiles">
             <div class="container">
-                <div class="columns is-multiline is-gapless">
+                <div class="columns is-multiline is-gapless is-justified">
                     <?php foreach($areas->getAreas() as $area){
                         include(locate_template('template-parts/partials/mini-area.php'));
                     } ?>
