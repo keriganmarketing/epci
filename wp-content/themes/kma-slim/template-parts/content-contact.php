@@ -42,7 +42,7 @@ include(locate_template('template-parts/sections/top.php'));
                     foreach($locations->getLocations() as $location){ ?>
                         <div class="location column is-6-tablet is-3-fullhd">
                             <div class="is-full-height is-flex-column is-justified-between">
-                                <h3 class="title is-3"><?= $location['name']; ?></h3>
+                                <h3 class="title is-3 is-secondary"><?= $location['name']; ?></h3>
                                 <p class="subtitle address"><?= nl2br($location['address']); ?></p>
                                 <div class="contact-info" style="padding: .5rem 0">
                                 <p class="phone"><em>email:</em> <a href="mailto:<?= $location['email']; ?>"><?= $location['email']; ?></a></p>

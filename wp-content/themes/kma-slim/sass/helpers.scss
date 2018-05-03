@@ -59,6 +59,19 @@
   font-weight: $weight-bold;
 }
 
+.title.is-primary {
+  color: $primary;
+}
+.title.is-secondary {
+  color: $secondary;
+}
+.title.is-tertiary {
+  color: $tertiary;
+}
+.title.is-info {
+  color: $info;
+}
+
 .is-first {
   order: 1;
 }
