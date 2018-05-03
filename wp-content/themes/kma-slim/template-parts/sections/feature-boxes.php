@@ -15,7 +15,7 @@
     <div class="column is-4-widescreen has-text-centered fire-safety is-flex-row is-justified-start">
         <div class="feature-box is-full-height is-flex-column is-justified-between is-aligned">
             <h3 class="bebas">Fire Safety Inspections</h3>
-            <p>Lorem ipsum</p>
+            <p>Under state and local laws, businesses must abide by fire codes for the safety of business employees, customers, and the surrounding properties.</p>
             <a class="button is-outlined is-rounded is-caps is-bold" href="/services/#fire-safety">Schedule an Inspection</a>
         </div>
     </div>
