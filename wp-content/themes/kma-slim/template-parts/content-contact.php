@@ -43,9 +43,9 @@ include(locate_template('template-parts/sections/top.php'));
                         <div class="location column is-6-tablet is-3-fullhd">
                             <div class="is-full-height is-flex-column is-justified-between">
                                 <h3 class="title is-4"><?= $location['name']; ?></h3>
+                                <p class="subtitle address"><?= nl2br($location['address']); ?></p>
                                 <div class="contact-info" style="padding: .5rem 0">
-                                <p class="address"><?= nl2br($location['address']); ?></p>
-                                <p class="phone"><em>email:</em> <a href="mailto:<?= $location['email']; ?>"><?= $location['phone']; ?></a></p>
+                                <p class="phone"><em>email:</em> <a href="mailto:<?= $location['email']; ?>"><?= $location['email']; ?></a></p>
                                 <p class="phone"><em>tel:</em> <a href="tel:<?= str_replace('(','',str_replace(') ', '-', $location['phone'])); ?>"><?= $location['phone']; ?></a></p>
                                 <p class="phone"><em>fax:</em> <?= $location['fax']; ?></p>
                                 </div>
