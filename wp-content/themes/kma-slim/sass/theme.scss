@@ -276,7 +276,7 @@ body {
       flex-wrap: wrap;
 
       @media screen and (min-width: $widescreen){
-        height: 315px;
+        max-height: 315px;
       }
 
       li {
