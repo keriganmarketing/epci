@@ -1,7 +1,7 @@
 <?php
 $member = (isset($member) ? $member : null);
 ?>
-<div class="column is-6 is-4-tablet is-3-fullhd">
+<div class="column is-6 is-4-desktop">
     <div class="member is-full-height has-text-centered">
         <div class="image is-square">
             <img src="<?= $member['images']['thumbnail'][0]; ?>" >

@@ -24,7 +24,7 @@ include(locate_template('template-parts/sections/top.php'));
                     <?php include(locate_template('template-parts/sections/support-heading.php')); ?>
                     <?php the_content();?>
 
-                    <div class="columns is-multiline is-gapless">
+                    <div class="columns is-multiline">
                         <?php foreach($members as $member){ ?>
                             <?php include(locate_template('template-parts/partials/mini-team.php')); ?>
                         <?php } ?>
