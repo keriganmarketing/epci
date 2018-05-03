@@ -67,9 +67,12 @@ body {
       .navbar-item {
         padding: 0;
 
-        a strong,
         a {
           background-color: transparent !important;
+          font-family: "Bebas Neue", sans-serif;
+          font-size: 1.8em;
+          padding: .5rem .5rem .5rem 1.5rem;
+
         }
         a::after {
           float: right;
@@ -79,16 +82,10 @@ body {
           transform: none;
           margin-top: 0;
           top: auto;
-          font-size: 1.65em;
-          line-height: 1em;
+          font-size: 1.1em;
+          line-height: 1.3em;
           bottom: 18px;
-        }
-        a {
-          padding: 1.5rem .5rem 1.5rem .75rem;
-          @media screen and (min-width: 375px) {
-            padding: 1.5rem .5rem 1.5rem 1.5rem;
-          }
-
+          color: $tertiary;
         }
       }
     }
@@ -544,6 +541,8 @@ body {
   }
 
   .location {
+    padding: 1.5rem;
+
     .subtitle {
       margin-bottom: .25rem;
     }
