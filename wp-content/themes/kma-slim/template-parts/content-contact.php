@@ -36,7 +36,6 @@ include(locate_template('template-parts/sections/top.php'));
             <div class="container">
                 <div class="content has-text-centered">
                     <h2>Building Departments</h2>
-                    <p>If you are uncertain of permitting requirements please contact us at your city's building department.</p>
                 </div>
                 <div class="columns is-multiline">
                     <?php $locations = new Locations();
