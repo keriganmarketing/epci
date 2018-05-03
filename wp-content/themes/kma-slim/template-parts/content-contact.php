@@ -40,13 +40,14 @@ include(locate_template('template-parts/sections/top.php'));
                 <div class="columns is-multiline">
                     <?php $locations = new Locations();
                     foreach($locations->getLocations() as $location){ ?>
-                        <div class="location column is-4-desktop is-3-fullhd">
+                        <div class="location column is-6-tablet is-3-fullhd">
                             <div class="is-full-height is-flex-column is-justified-between">
                                 <h3 class="title is-4"><?= $location['name']; ?></h3>
                                 <div class="contact-info" style="padding: .5rem 0">
                                 <p class="address"><?= nl2br($location['address']); ?></p>
+                                <p class="phone"><em>email:</em> <a href="mailto:<?= $location['email']; ?>"><?= $location['phone']; ?></a></p>
                                 <p class="phone"><em>tel:</em> <a href="tel:<?= str_replace('(','',str_replace(') ', '-', $location['phone'])); ?>"><?= $location['phone']; ?></a></p>
-                                <p class="phone"><em>fax:</em> <a href="tel:<?= str_replace('(','',str_replace(') ', '-', $location['fax'])); ?>"><?= $location['fax']; ?></a></p>
+                                <p class="phone"><em>fax:</em> <?= $location['fax']; ?></p>
                                 </div>
                                 <p><a class="button is-primary is-rounded is-outlined" href="https://www.google.com/maps/dir//<?= $location['latitude']; ?>,<?= $location['longitude']; ?>">Get directions</a></p>
                             </div>

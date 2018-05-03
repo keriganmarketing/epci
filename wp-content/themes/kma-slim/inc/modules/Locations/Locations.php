@@ -49,6 +49,7 @@ class Locations
                 'Address'         => 'textarea',
                 'Phone Number'    => 'text',
                 'Fax Number'      => 'text',
+                'Email Address'   => 'text',
                 'GPS Coordinates' => 'text'
             )
         );
@@ -137,6 +138,7 @@ class Locations
                 'longitude' => (isset($gpsCoordinates) ? $gpsCoordinates[1] : null),
                 'phone'     => (isset($item->location_info_phone_number) ? $item->location_info_phone_number : null),
                 'fax'       => (isset($item->location_info_fax_number) ? $item->location_info_fax_number : null),
+                'email'     => (isset($item->location_info_email_address) ? $item->location_info_email_address : null),
                 'slug'      => (isset($item->post_name) ? $item->post_name : null),
                 'photo'     => (isset($item->location_info_photo) ? $item->location_info_photo : null),
                 'link'      => get_permalink($item->ID),
