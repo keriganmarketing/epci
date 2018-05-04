@@ -267,7 +267,7 @@ body {
       margin-bottom: 1.5rem;
     }
 
-    ul, ol {
+    ul.split-list, ol.split-list {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
