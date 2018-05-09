@@ -26,11 +26,11 @@ $headline = $post->post_title;
                     <div class="columns is-multiline is-variable is-8">
                         <div class="column is-6">
                             <h2>Contractor Forms & Information</h2>
-                            <?= $area['contractor_content']; ?>
+                            <?= apply_filters('the_content', $area['contractor_content']); ?>
                         </div>
                         <div class="column is-6">
                             <h2>Home Owner Forms & Information</h2>
-                            <?= $area['home_owner_content']; ?>
+                            <?= apply_filters('the_content', $area['home_owner_content']); ?>
                         </div>
                     </div>
                 </div><!-- .entry-content -->
