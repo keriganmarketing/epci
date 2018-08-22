@@ -13,7 +13,8 @@ class SimpleContact extends Leads
             ]
         );
         parent::set('postType', 'Contact Submission');
-        parent::set('adminEmail', 'bryan@kerigan.com');
+        parent::set('ccEmail', 'hodges@codesouth.com');
+        parent::set('adminEmail', 'bo146@codesouth.com');
     }
 
     protected function showForm()
