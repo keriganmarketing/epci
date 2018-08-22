@@ -11,13 +11,13 @@
   },
   "devDependencies": {
     "bulma": "^0.4.4",
-    "cross-env": "^5.1.4",
+    "cross-env": "^5.2.0",
     "font-awesome": "^4.7.0",
     "laravel-mix": "0.*",
-    "vue": "^2.5.16"
+    "vue": "^2.5.17"
   },
   "dependencies": {
-    "autoprefixer": "^8.4.1",
+    "autoprefixer": "^8.6.5",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "glob": "^7.1.2",
@@ -25,6 +25,6 @@
     "marker-clusterer-plus": "^2.1.4",
     "purgecss-webpack-plugin": "^0.20.1",
     "vue-parallax-js": "0.0.5",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.17"
   }
 }
