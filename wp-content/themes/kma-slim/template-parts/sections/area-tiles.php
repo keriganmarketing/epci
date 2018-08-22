@@ -8,11 +8,11 @@ $areas = new Areas();
         <h2 class="has-text-centered">City Information</h2>
         <p class="has-text-centered">Click below for your city's contractor and homeowner information and forms.</p>
     </div>
-    <div class="columns is-multiline is-gapless">
+    <div class="columns is-multiline is-gapless is-centered">
         <?php foreach($areas->getAreas() as $area){
             include(locate_template('template-parts/partials/mini-area.php'));
         } ?>
-        <div class="area column is-12-tablet is-8-desktop is-6-widescreen">
+        <div class="area column is-6-tablet is-4-desktop is-3-widescreen">
             <div class="image is-square">
                 <a href="/city-information/" class="area-link">
                 <span class="area-border">
