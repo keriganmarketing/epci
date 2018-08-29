@@ -44,13 +44,7 @@ include(locate_template('template-parts/sections/top.php'));
         <div class="section-wrapper home-page-copy">
             <div class="container">
                 <div class="content home">
-                    <h1>As a locally owned and operated business, EP Consultants, Inc. (EPCI) provides a personal
-                        interest in assisting local municipalities, contractors, and homeowners in code services.</h1>
-                    <hr>
-                    <p>We offer over two decades of experience in Florida code services on a state and local level, to
-                        ensure that the development of Northwest Florida flourishes into a structurally safe
-                        environment. We pride ourselves in assisting local municipalities with obtaining development
-                        goals, knowing these efforts will lead to a bright future for Florida's cities. </p>
+                    <?php the_content();?>
                 </div>
             </div>
         </div>
