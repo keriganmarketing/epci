@@ -66,6 +66,7 @@ class Team
             'manage_team_member_posts_columns',
             function ($defaults) {
                 $defaults = [
+                    'cb'          => '',
                     'title'       => 'Name',
                     'wtitle'      => 'Title',
                     'email'       => 'Email Address',
