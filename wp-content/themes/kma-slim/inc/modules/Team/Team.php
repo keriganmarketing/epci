@@ -81,17 +81,17 @@ class Team
             switch ($column_name) {
                 case 'photo':
                     $photo = get_post_meta($post_ID, 'contact_info_photo', true);
-                    echo(isset($photo) ? '<img src ="' . $photo . '" class="img-fluid" style="width:400px; max-width:100%;" >' : null);
+                    echo(isset($photo) ? '<img src ="' . $photo . '" class="img-fluid" style="width:120px; max-width:100%;" >' : null);
                     break;
 
                 case 'email':
                     $object = get_post_meta($post_ID, 'contact_info_email', true);
-                    echo(isset($object) ? date('M j, Y', strtotime($object)) : null);
+                    echo(isset($object) ? $object : null);
                     break;
 
                 case 'wtitle':
                     $object = get_post_meta($post_ID, 'contact_info_title', true);
-                    echo(isset($object) ? date('M j, Y', strtotime($object)) : null);
+                    echo(isset($object) ? $object : null);
                     break;
             }
         }, 0, 2);
