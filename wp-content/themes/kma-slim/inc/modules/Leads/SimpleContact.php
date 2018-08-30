@@ -13,7 +13,7 @@ class SimpleContact extends Leads
             ]
         );
         parent::set('postType', 'Contact Submission');
-        parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com');
+        parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com, justin@codesouth.com');
         parent::set('adminEmail', 'panamacity@codesouth.com');
     }
 
