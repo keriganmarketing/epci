@@ -13,14 +13,19 @@ class SimpleContact extends Leads
             ]
         );
         parent::set('postType', 'Contact Submission');
-        parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com, justin@codesouth.com');
-        parent::set('adminEmail', 'panamacity@codesouth.com');
+        //parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com, justin@codesouth.com');
+        //parent::set('adminEmail', 'panamacity@codesouth.com');
+        parent::set('adminEmail', 'bryan@kerigan.com');
     }
 
     protected function showForm()
     {
         $form = file_get_contents(locate_template('template-parts/forms/contact-form.php'));
         $formSubmitted = (isset($_POST['sec']) ? ($_POST['sec'] == '' ? true : false) : false );
+        $form = str_replace('{{user-agent}}', $_SERVER['HTTP_USER_AGENT'], $form);
+		$form = str_replace('{{ip-address}}', parent::getIP(), $form);
+        $form = str_replace('{{referrer}}', $_SERVER['HTTP_REFERER'], $form);
+        
         ob_start();
         if($formSubmitted){
             if($this->handleLead($_POST)){
