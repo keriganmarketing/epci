@@ -13,9 +13,9 @@ class SimpleContact extends Leads
             ]
         );
         parent::set('postType', 'Contact Submission');
-        //parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com, justin@codesouth.com');
-        //parent::set('adminEmail', 'panamacity@codesouth.com');
-        parent::set('adminEmail', 'bryan@kerigan.com');
+        parent::set('ccEmail', 'bo146@codesouth.com, hodges@codesouth.com, justin@codesouth.com');
+        parent::set('adminEmail', 'panamacity@codesouth.com');
+        //parent::set('adminEmail', 'bryan@kerigan.com');
     }
 
     protected function showForm()
