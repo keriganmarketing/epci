@@ -39,7 +39,7 @@ $socialIcons = $socialLinks->getSocialLinks('svg', 'circle');
         <div id="bot-bot">
             <div class="container">
                 <div class="is-flex-column is-justified is-aligned">
-                    <p class="contact-info"><span class="address is-block is-inline-block-tablet" >647&nbsp;Jenks&nbsp;Ave. Suite&nbsp;A, Panama&nbsp;City,&nbsp;Florida&nbsp;32401</span>
+                    <p class="contact-info"><span class="address is-block is-inline-block-tablet" >205&nbsp;W. 7th&nbsp;St.&nbsp;Panama&nbsp;City,&nbsp;Florida&nbsp;32401</span>
                         <span class="is-hidden-mobile" >|</span>
                         <span class="phone is-block is-inline-block-tablet" ><em>phone:</em> <a class="is-bold" href="tel:850-818-0213" >850-818-0213</a></span>
                         <span class="is-hidden-mobile" >|</span>
